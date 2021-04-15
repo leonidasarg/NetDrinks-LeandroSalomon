@@ -15,10 +15,10 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Net Drinks - Leandro Salomon
         </a>
       </header>
-    </div>
+    </div>g
   );
 }
 
