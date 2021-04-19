@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import logoNet from './images/Logonet.png';
 import './App.css';
 
 function App() {
-  return (
+// const ecommerceName = 'NetDrinks';
+// const handleLogo = () => alert(`Bienvenido a ${ecommerceName}`)
+// <p className="logo" onClick={handleLogo}>{ecommerceName}</p>  
+
+return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Net Drinks - Leandro Salomon
+      <header className="topbar">
+        <a href="#">
+          <img src={logoNet} className="logoImg" />
         </a>
+        <nav className="navbar">
+          <ul className="links">
+            <li className="link">
+              <a href='#'>HOME</a>
+            </li>
+            <li className="link">
+              <a href='#'>Productos</a>
+            </li>
+            <li className="link">
+              <a href='#'>Nosotros</a>
+            </li>
+            <li className="link">
+              <a href='#'>Contacto</a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="https://image.flaticon.com/icons/png/512/107/107831.png" className="iconoCarrito"/>
+              </a>
+            </li>
+          </ul>
+        </nav>
       </header>
-    </div>g
+    </div>
   );
 }
 
