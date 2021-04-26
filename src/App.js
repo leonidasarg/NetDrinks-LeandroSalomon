@@ -1,6 +1,7 @@
 import './App.css';
 import { Navbar } from './components/navbar/navbar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
+import { ItemCount } from './components/ItemCount/ItemCount'
 
 function App() {
 // const ecommerceName = 'NetDrinks';
@@ -11,7 +12,7 @@ const products = [
   {
     title: 'Fernet Branca',
     price: 450 ,
-    description: 'La mejor bebida'
+    description: 'La mejor bebida',
   },
 
   {
@@ -43,9 +44,14 @@ return (
   
     <div className="App">
       <Navbar />
-      <ItemListContainer products={products} />
+      <div>
+      <ItemListContainer className="list-product" products={products} count 
+      />
+      <ItemCount />
+      </div>
     </div>
   )
 }
 
 export default App;
+ 
