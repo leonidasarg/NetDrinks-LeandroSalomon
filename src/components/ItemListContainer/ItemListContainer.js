@@ -8,7 +8,6 @@ export const ItemListContainer = (props) =>
             description={product.description}
         />
     )
-
 )
 
 export default ItemListContainer

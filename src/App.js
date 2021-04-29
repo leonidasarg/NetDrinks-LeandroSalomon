@@ -45,7 +45,7 @@ return (
     <div className="App">
       <Navbar />
       <div>
-      <ItemListContainer className="list-product" products={products} count 
+      <ItemListContainer className="list-product" products={products}
       />
       <ItemCount />
       </div>
