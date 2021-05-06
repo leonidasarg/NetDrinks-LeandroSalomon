@@ -1,6 +1,7 @@
 import logoNet from './Logonet.png';
 import './navbar.css'
 import { CartWidget} from '../../components/CartWidget/CartWidget'
+import { Link } from  'react-router-dom'
 
 export const Navbar = () => {
     return (
@@ -10,8 +11,8 @@ export const Navbar = () => {
             </a>
         <nav className="navbar">
           <ul className="links">
-            <li className="link">
-              <a href='#'>HOME</a>
+            <li className="link" >
+              <Link to= '/'>HOME</Link>
             </li>
             <li className="link">
               <a href='#'>Productos</a>

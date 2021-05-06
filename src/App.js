@@ -1,57 +1,81 @@
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Navbar } from './components/navbar/navbar'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
 import { ItemCount } from './components/ItemCount/ItemCount'
+import React from 'react';
 
-function App() {
-// const ecommerceName = 'NetDrinks';
-// const handleLogo = () => alert(`Bienvenido a ${ecommerceName}`)
-// <p className="logo" onClick={handleLogo}>{ecommerceName}</p>  
+ReactDOM.render(
+  <React.StrictMode>
+  </React.StrictMode>
+),
 
-const products = [
-  {
-    title: 'Fernet Branca',
-    price: 450 ,
-    description: 'La mejor bebida',
-  },
+  function App() {
+    // const ecommerceName = 'NetDrinks';
+    // const handleLogo = () => alert(`Bienvenido a ${ecommerceName}`)
+    // <p className="logo" onClick={handleLogo}>{ecommerceName}</p>  
 
-  {
-    title: 'Vodka Absolut',
-    price: 1500,
-    description: 'Vodka importado'
-  },
+    const products = [
+      {
+        title: 'Fernet Branca',
+        price: 450,
+        description: 'La mejor bebida',
+      },
 
-  {
-    title: 'Gin Beefeater',
-    price: 1300,
-    description: 'Gin de calidad'
-  },
+      {
+        title: 'Vodka Absolut',
+        price: 1500,
+        description: 'Vodka importado'
+      },
 
-  {
-    title: 'Santa Julia Chenin Dulce',
-    price: 400,
-    description: 'Vino dulce de cosecha tardía'
-  },
+      {
+        title: 'Gin Beefeater',
+        price: 1300,
+        description: 'Gin de calidad'
+      },
 
-  {
-    title: 'Vodka Smirnoff',
-    price: 500,
-    description: 'El vodka ideal para tu previa'
+      {
+        title: 'Santa Julia Chenin Dulce',
+        price: 400,
+        description: 'Vino dulce de cosecha tardía'
+      },
+
+      {
+        title: 'Vodka Smirnoff',
+        price: 500,
+        description: 'El vodka ideal para tu previa'
+      }
+    ]
+
+    return (
+
+
+      <BrowserRouter>
+        <header>
+          <Navbar />
+        </header>
+        <Switch>
+          <Route exact path="/">
+            <div className="App">
+
+              <div>
+                <ItemListContainer className="list-product" products={products}
+                />
+                <ItemCount />
+              </div>
+            </div>
+
+          </Route>
+
+          <Route path='/item/:itemId'>
+            <ItemDetail />
+          </Route>
+          
+        </Switch>
+      </BrowserRouter>
+
+
+    )
   }
-]
-
-return (
-  
-    <div className="App">
-      <Navbar />
-      <div>
-      <ItemListContainer className="list-product" products={products}
-      />
-      <ItemCount />
-      </div>
-    </div>
-  )
-}
 
 export default App;
- 
