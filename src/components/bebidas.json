@@ -1,0 +1,35 @@
+[
+    {
+    "id": "1",
+    "nombre": "Fernet Branca",
+    "precio": 96,
+    "categoria": "Aperitivo"
+}, {
+    "id": "2",
+    "nombre": "Absolut Vodka",
+    "precio": 1500,
+    "categoria": "Vodka"
+}, {
+    "id": "3",
+    "nombre": "Vodka Smirnoff",
+    "precio": 499,
+    "categoria": "Vodka"
+}, {
+    "id": "4",
+    "nombre": "Vino Santa Julia Chenin Dulce",
+    "precio": 250,
+    "categoria": "Vino Blanco"
+    }, {
+    "id": "5",
+    "nombre": "Vodka Skyy",
+    "precio": 500,
+    "categoria": "Vodka"
+    }, {
+    
+    }, {
+    "id": "6",
+    "nombre": "Monster",
+    "precio": 150,
+    "categoria": "Energizantes"
+    }
+]

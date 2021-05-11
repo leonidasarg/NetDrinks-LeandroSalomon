@@ -8,7 +8,7 @@ function ItemDetailContainer(props) {
 
   useEffect(() => {
     setTimeout(() => {
-      fetch(`https://5f3c95f36c11f80016d6f21e.mockapi.io/bitbuyer/items/${id}`)
+      fetch(`https://609acd920f5a13001721bebf.mockapi.io/NetDrinks/items/${id}`)
         .then(response => {
           return response.json();
         })
