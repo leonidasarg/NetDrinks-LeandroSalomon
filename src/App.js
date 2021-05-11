@@ -1,81 +1,34 @@
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Navbar } from './components/navbar/navbar'
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
-import { ItemCount } from './components/ItemCount/ItemCount'
 import React from 'react';
+import ItemListContainer from './components/ItemListContainer'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import CatList from './components/itemListCategory'
+import CartContextProvider from './components/Context'
+import Cart from './components/Cart'
+import ItemDetailContainer from './components/ItemDetailContainer'
 
-ReactDOM.render(
-  <React.StrictMode>
-  </React.StrictMode>
-),
 
   function App() {
     // const ecommerceName = 'NetDrinks';
     // const handleLogo = () => alert(`Bienvenido a ${ecommerceName}`)
     // <p className="logo" onClick={handleLogo}>{ecommerceName}</p>  
 
-    const products = [
-      {
-        title: 'Fernet Branca',
-        price: 450,
-        description: 'La mejor bebida',
-      },
-
-      {
-        title: 'Vodka Absolut',
-        price: 1500,
-        description: 'Vodka importado'
-      },
-
-      {
-        title: 'Gin Beefeater',
-        price: 1300,
-        description: 'Gin de calidad'
-      },
-
-      {
-        title: 'Santa Julia Chenin Dulce',
-        price: 400,
-        description: 'Vino dulce de cosecha tardía'
-      },
-
-      {
-        title: 'Vodka Smirnoff',
-        price: 500,
-        description: 'El vodka ideal para tu previa'
-      }
-    ]
-
-    return (
-
-
+  return (
+  <div>
+    <CartContextProvider>
       <BrowserRouter>
-        <header>
-          <Navbar />
-        </header>
+      <Navbar />
         <Switch>
-          <Route exact path="/">
-            <div className="App">
-
-              <div>
-                <ItemListContainer className="list-product" products={products}
-                />
-                <ItemCount />
-              </div>
-            </div>
-
-          </Route>
-
-          <Route path='/item/:itemId'>
-            <ItemDetail />
-          </Route>
-          
+          <Route exact path="/" component={ItemListContainer} />
+          <Route path="/itemdetail/:id" component={ItemDetailContainer} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/category/:cat" component={CatList}/>
         </Switch>
       </BrowserRouter>
-
-
-    )
+    </CartContextProvider>
+  </div>
+  );
   }
 
 export default App;

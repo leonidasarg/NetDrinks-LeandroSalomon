@@ -5,9 +5,7 @@ export const CartWidget = () => {
 
     return (
     <div onClick={handleClick}>
-        <a href="#">
             <img  src="https://image.flaticon.com/icons/png/512/107/107831.png" className="iconoCarrito"/>
-        </a>
     </div>
     )
 }

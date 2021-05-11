@@ -1,9 +1,15 @@
+import React from 'react'
+import { useContext } from 'react'
 import logoNet from './Logonet.png';
 import './navbar.css'
-import { CartWidget} from '../../components/CartWidget/CartWidget'
-import { Link } from  'react-router-dom'
+import { CartWidget } from './CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
+import { CartContext} from '../Context';
 
 export const Navbar = () => {
+  
+  const [products, productsCount, addProduct, delProduct, getGrandTotal] = useContext(CartContext);
+
     return (
         <header className="topbar">
             <a href="#">
@@ -12,7 +18,7 @@ export const Navbar = () => {
         <nav className="navbar">
           <ul className="links">
             <li className="link" >
-              <Link to= '/'>HOME</Link>
+              <a href='#'>HOME</a>
             </li>
             <li className="link">
               <a href='#'>Productos</a>
@@ -23,9 +29,10 @@ export const Navbar = () => {
             <li className="link">
               <a href='#'>Contacto</a>
             </li>
-            <li>
-              <CartWidget />
-            </li>
+            <Link to={'/cart'}>
+              Carrito <span>{productsCount}</span>
+              <CartWidget /> 
+            </Link>
           </ul>
         </nav>
       </header>
