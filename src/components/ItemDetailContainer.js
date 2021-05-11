@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect, useParams } from 'react'
 import ItemDetail from "./ItemDetail";
 
-function ItemDetailContainer (props) {
+function ItemDetailContainer(props) {
   const [item, setItem1] = useState(false);
   let id = props.match.params.id;
 

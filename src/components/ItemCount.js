@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import './ItemCount.css';
 
 export default function ItemCount(props) {
-    const [count, setCount] = useState(1);
+    const [count, setCount] = useState(0);
 
     useEffect (() => {
         if (count < 0) {
@@ -14,14 +14,15 @@ export default function ItemCount(props) {
             }
         }
         props.func(count);
-    }, []);
+    }, [count]);
 
     return (
         <div>
             <h4>{props.nombre}</h4>
             <h4>Precio: {props.precio}</h4>
-            <input type="button" value="+" onClick={ () => setCount(count + 1)} />
             <input type="button" value="-" onClick={ () => setCount(count - 1)} />
+            {count}
+            <input type="button" value="+" onClick={ () => setCount(count + 1)} />
         </div>
     );
 }

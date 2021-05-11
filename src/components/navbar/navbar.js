@@ -12,13 +12,15 @@ export const Navbar = () => {
 
     return (
         <header className="topbar">
-            <a href="#">
+              <Link exact to={"/"}>
                 <img src={logoNet} className="logoImg"  />
-            </a>
+              </Link>
         <nav className="navbar">
           <ul className="links">
             <li className="link" >
-              <a href='#'>HOME</a>
+              <Link exact to={"/"}>
+                Home
+              </Link>
             </li>
             <li className="link">
               <a href='#'>Productos</a>
@@ -30,7 +32,7 @@ export const Navbar = () => {
               <a href='#'>Contacto</a>
             </li>
             <Link to={'/cart'}>
-              Carrito <span>{productsCount}</span>
+              Carrito <span>{productsCount()}</span>
               <CartWidget /> 
             </Link>
           </ul>
