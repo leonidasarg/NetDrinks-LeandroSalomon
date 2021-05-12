@@ -17,12 +17,14 @@ export default function ItemCount(props) {
     }, [count]);
 
     return (
-        <div>
+        <div className="item-count">
             <h4>{props.nombre}</h4>
             <h4>Precio: {props.precio}</h4>
-            <input type="button" value="-" onClick={ () => setCount(count - 1)} />
-            {count}
-            <input type="button" value="+" onClick={ () => setCount(count + 1)} />
+            <div className="count-buttons-container">
+                <input className="count-buttons" type="button" value="-" onClick={ () => setCount(count - 1)} />
+                    {count}
+                <input className="count-buttons" type="button" value="+" onClick={ () => setCount(count + 1)} />
+            </div>
         </div>
     );
 }

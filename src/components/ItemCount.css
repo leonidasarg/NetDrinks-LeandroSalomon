@@ -1,0 +1,29 @@
+.item-count {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.count-buttons-container {
+    width: 200px;
+    height: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    border: solid 1px black;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.count-buttons {
+    background-color: bisque;
+    border: solid 1px black;
+    border-radius: 3px;
+    padding: 5px;
+    height: 20px;
+    width: 30px;
+}

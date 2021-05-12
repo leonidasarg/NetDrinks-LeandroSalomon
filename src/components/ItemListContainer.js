@@ -1,13 +1,14 @@
 import React from 'react';
 import ItemList from './ItemList'
+import './ItemListContainer.css'
 
 export default function ItemListContainer(props) {
     
     return (
 
-        <div className="ItemListContainer">
+        <div className="item-list-container">
             <p>
-                Buenvenido a nuestra lista de productos
+                Bienvenido a nuestra lista de productos
             </p>
             <ItemList />
         </div>

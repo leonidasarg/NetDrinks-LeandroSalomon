@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Item from "./item"
+import './ItemList.css'
 
 function ItemList (props) {
     const [items, setItems] = useState (false)
@@ -18,7 +19,7 @@ function ItemList (props) {
     }, []);
 
     return (
-        <div>
+        <div className="item-container">
             {items ? (
                 items.map((i, index) => (
                     <Item
