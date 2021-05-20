@@ -10,9 +10,6 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 
 
   function App() {
-    // const ecommerceName = 'NetDrinks';
-    // const handleLogo = () => alert(`Bienvenido a ${ecommerceName}`)
-    // <p className="logo" onClick={handleLogo}>{ecommerceName}</p>  
 
   return (
   <div>
